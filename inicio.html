@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="encabezado">
+        <h1 class="fd">Feliz Día Mamá</h1>
+    </div>
+    <div class="intro">
+        <h2 class="intro1">En este día especial, honramos y celebramos el amor incondicional, la sabiduría infinita y la fuerza incomparable de todas las madres. ¡Feliz Día de la Madre!</h2>
+    </div>
+    <div class="pregunta">
+        <h3 class="pregunta1">¿Desea leer las palabras de tu hijo?</h3>
+    </div>
+    <div class="contenedor">
+        <a href="Op1.html" class="btn btn-1">No, porque no lo quiero</a>
+        <a class="btn btn-2" onmouseover="moveButton(this)">Si, porque le quiero</a>
+        <script>
+            function moveButton(button) {
+            var container = document.documentElement.getBoundingClientRect(); // Obtener el rectángulo del contenedor
+            var buttonRect = button.getBoundingClientRect(); // Obtener el rectángulo del botón
+            var maxDistance = 200; // Límite máximo de distancia en píxeles
+            var maxX = Math.min(container.width - buttonRect.width, maxDistance); // Límite máximo en el eje X
+            var maxY = Math.min(container.height - buttonRect.height, maxDistance); // Límite máximo en el eje Y
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            button.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            }
+        </script>
+    </div>
+    
+</body>
+</html>
+
